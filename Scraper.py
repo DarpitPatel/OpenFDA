@@ -28,14 +28,7 @@ while count < int(iterations):
 
     row=""
     bin2int=""
-    if('medicinalproduct' in str(result['patient']['drug'][0])):
-        medicinalproduct=result['patient']['drug'][0]['medicinalproduct']
-        f.write('medicinalproduct|') 
-        f.write(medicinalproduct)
-        f.write('|')
-        row += medicinalproduct + ","        
-    else:
-      continue
+   
     if('patientsex' in str(result['patient'])):
         patientsex=result['patient']['patientsex']
         f.write('patientsex|') 
