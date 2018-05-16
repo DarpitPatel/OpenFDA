@@ -14,9 +14,10 @@ end_date = []
 f = open('output.txt', 'w')
 csv = open('output.csv', "w") 
 medicinename= sys.argv[1]
+iterations= sys.argv[2]
 
 
-while count < 10:
+while count < int(iterations):
     
   skip=1000*count
   URL = 'https://api.fda.gov/drug/event.json?search=patient.drug.medicinalproduct:'+medicinename+'&limit=100&skip='+str(skip)
